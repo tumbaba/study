@@ -1,6 +1,6 @@
-//¸®½ºÆ® ¿¬½À¹®Á¦ : ¸®½ºÆ®¿¡ ·£´ýÇÔ¼öÀÌ¿ë 30°³Á¤µµ¸¦ ·£´ý°ªÀ» ÀúÀå
-//Â¦¼ö¸¸ »èÁ¦ÇÏ°í ¸®½ºÆ®¿¡ È¦¼ö¸¸ ³²°ÔÇÏ´Â ÇÁ·Î±×·¥ ÀÛ¼º
-//È¦¼ö¸¸ ³²Àº °ÍÀ» »çÀÌÁîÇÏ°í È¦¼ö ¼ýÀÚµé Ãâ·Â
+//ë¦¬ìŠ¤íŠ¸ ì—°ìŠµë¬¸ì œ : ë¦¬ìŠ¤íŠ¸ì— ëžœë¤í•¨ìˆ˜ì´ìš© 30ê°œì •ë„ë¥¼ ëžœë¤ê°’ì„ ì €ìž¥
+//ì§ìˆ˜ë§Œ ì‚­ì œí•˜ê³  ë¦¬ìŠ¤íŠ¸ì— í™€ìˆ˜ë§Œ ë‚¨ê²Œí•˜ëŠ” í”„ë¡œê·¸ëž¨ ìž‘ì„±
+//í™€ìˆ˜ë§Œ ë‚¨ì€ ê²ƒì„ ì‚¬ì´ì¦ˆí•˜ê³  í™€ìˆ˜ ìˆ«ìžë“¤ ì¶œë ¥
 
 #include "stdafx.h"
 #include <vector>
@@ -21,7 +21,7 @@ int main() {
 		Numbers.push_back(ran);
 	}
 
-	cout << "·£´ýÀ¸·Î »ÌÀº 30°³ ¼ýÀÚ´Â? " << endl;
+	cout << "ëžœë¤ìœ¼ë¡œ ë½‘ì€ 30ê°œ ìˆ«ìžëŠ”? " << endl;
 	
 	for(auto it = Numbers.begin(); it != Numbers.end(); ++it) 
 	{
@@ -32,7 +32,7 @@ int main() {
 	
 	cout << endl << endl;
 
-	cout << "È¦¼ö »ÌÀº ¼ýÀÚ´Â? " << endl;
+	cout << "í™€ìˆ˜ ë½‘ì€ ìˆ«ìžëŠ”? " << endl;
 	for (int i = 2; i < 100; i += 2)
 	{
 		Numbers.remove(i);
