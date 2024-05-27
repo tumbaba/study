@@ -4,9 +4,9 @@
 #include "CTriangle.h"
 #include "CBox.h"
 
-using namespace std; // namespace¿¡¼­ ¿µ¿ªÀ» Æ÷ÇÔ½ÃÅ´ (std ¿Ü ´Ù¸¥ ºÎºĞ¿¡µµ »ç¿ë°¡´É)
+using namespace std; // namespaceì—ì„œ ì˜ì—­ì„ í¬í•¨ì‹œí‚´ (std ì™¸ ë‹¤ë¥¸ ë¶€ë¶„ì—ë„ ì‚¬ìš©ê°€ëŠ¥)
 
-// class ºÎ¸ğ ÀÚ½Ä »ó¼Ó
+// class ë¶€ëª¨ ìì‹ ìƒì†
 
 
 int main() 
