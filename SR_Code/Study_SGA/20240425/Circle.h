@@ -2,9 +2,9 @@
 class Circle
 {
 public:
-	Circle(); // »ý¼ºÀÚ
+	Circle(); // Å¥Ã½ÅºÅŸÅ”Ãš
 	Circle(float r);
-	~Circle(); // ¼Ò¸êÀÚ
+	~Circle(); // ÅºÅ‡Â¸Ä™Å”Ãš
 
 	float radius;
 private:
