@@ -5,12 +5,12 @@ using namespace std;
 
 void CShape::Area()
 {
-	cout << "»ó¼ÓµÈ ÇÔ¼ö CShape :: Area()¸¦ »ç¿ëÇß½À´Ï´Ù." << endl;
+	cout << "ìƒì†ëœ í•¨ìˆ˜ CShape :: Area()ë¥¼ ì‚¬ìš©í–ˆìŠµë‹ˆë‹¤." << endl;
 }
 
 void CShape::Length()
 {
-	cout << "»ó¼ÓµÈ ÇÔ¼ö CShape :: Length()¸¦ »ç¿ëÇß½À´Ï´Ù." << endl;
+	cout << "ìƒì†ëœ í•¨ìˆ˜ CShape :: Length()ë¥¼ ì‚¬ìš©í–ˆìŠµë‹ˆë‹¤." << endl;
 }
 
 void CShape::Print(string str)
