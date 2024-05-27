@@ -13,11 +13,11 @@ int main() {
 	Cat cat;
 	Birld birld;
 
-	birld.playSound(); // overrid (¿À¹ö¶óÀÌµå) µÈ ÀÚ½Ä playsound È£Ãâ
+	birld.playSound(); // overrid (ì˜¤ë²„ë¼ì´ë“œ) ëœ ìì‹ playsound í˜¸ì¶œ
 
 	
 	
-	// ÆÄÀÏ ÀÔÃâ·Â
+	// íŒŒì¼ ì…ì¶œë ¥
 
 
 
