@@ -1,12 +1,12 @@
 #include "stdafx.h"
 
-// Class = protected (ºÎ¸ğ ÀÚ½Ä °ü°èÁß protected)
-// ÀÚ½Ä, ºÎ¸ğ¾È¿¡°ü°è´Â publicÀ¸·Î ÇØ°áÇÏÁö¸¸ protected´Â ¿ÜºÎ°ø°³Á¦ÇÑ(class ³¢¸® °ü°è¸¸ Çã¿ëµÊ)
-// virtualÀº ÇÔ¼ö¿¡¸¸ ¾Õ¿¡ ºÙ¿©¼­ »ç¿ëÇßÁö¸¸ protected´Â ÇØ´ç ¿µ¿ªÀ» °ø°£À» »ç¿ëµÇµµ·Ï..
+// Class = protected (ë¶€ëª¨ ìì‹ ê´€ê³„ì¤‘ protected)
+// ìì‹, ë¶€ëª¨ì•ˆì—ê´€ê³„ëŠ” publicìœ¼ë¡œ í•´ê²°í•˜ì§€ë§Œ protectedëŠ” ì™¸ë¶€ê³µê°œì œí•œ(class ë¼ë¦¬ ê´€ê³„ë§Œ í—ˆìš©ë¨)
+// virtualì€ í•¨ìˆ˜ì—ë§Œ ì•ì— ë¶™ì—¬ì„œ ì‚¬ìš©í–ˆì§€ë§Œ protectedëŠ” í•´ë‹¹ ì˜ì—­ì„ ê³µê°„ì„ ì‚¬ìš©ë˜ë„ë¡..
 
-//ºÎ¸ğ Å¬·¡½º
+//ë¶€ëª¨ í´ë˜ìŠ¤
 class Parent {
-protected: // protected ¸É¹ö
+protected: // protected ë§´ë²„
 	int protectedVar;
 
 public:
@@ -21,11 +21,11 @@ public:
 	}
 };
 
-// ÀÚ½Ä Å¬·¡½º
+// ìì‹ í´ë˜ìŠ¤
 class Child : public Parent {
 public:
-	void accessProtected() {     // (int value ¸¦ »ç¿ëÇÒ¼öµµ ÀÖÀ½)
-		// protected ¸É¹ö¿¡ Á¢±Ù °¡´É
+	void accessProtected() {     // (int value ë¥¼ ì‚¬ìš©í• ìˆ˜ë„ ìˆìŒ)
+		// protected ë§´ë²„ì— ì ‘ê·¼ ê°€ëŠ¥
 		protectedVar = 42;
 	}
 
@@ -54,10 +54,10 @@ int main()
 	par->setProtectedVar(10);
 	cout << par->getProtectedVar();
 
-	child->accessProtected(); // ÀÚ½Ä °íÀ¯ ÇÔ¼ö
+	child->accessProtected(); // ìì‹ ê³ ìœ  í•¨ìˆ˜
 	child->displayProtected();
 
-	child->setProtectedVar(80); // »ó¼Ó¹ŞÀº ºÎ¸ğÀÇ ±â´É ÇÔ¼ö
+	child->setProtectedVar(80); // ìƒì†ë°›ì€ ë¶€ëª¨ì˜ ê¸°ëŠ¥ í•¨ìˆ˜
 	*/
 	
 	return 0;
