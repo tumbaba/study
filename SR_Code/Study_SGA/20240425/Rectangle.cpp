@@ -1,6 +1,6 @@
 #include "Rectangle.h"
 
-// »ı¼ºÀÚ
+// ìƒì„±ì
 Rectangle::Rectangle()
 {
 	width = 0;
@@ -21,15 +21,15 @@ Rectangle::Rectangle(int w)
 
 
 
-// ¼Ò¸êÀÚ
+// ì†Œë©¸ì
 Rectangle::~Rectangle()
 {
 
 }
-int Rectangle::getArea() // Å¬·¡½º ¾ÈÀÇ ÇÔ¼ö ±¸ÇöµÇ´Â ·ÎÁ÷
+int Rectangle::getArea() // í´ë˜ìŠ¤ ì•ˆì˜ í•¨ìˆ˜ êµ¬í˜„ë˜ëŠ” ë¡œì§
 {
 	int A = width * height;
-	return A;			// ¸®ÅÏÀÌ Ãâ·ÂµÇ´Â ´ë»ó (void = ¸¸¾à À­ int ¼±¾ğÀÌ¾Æ´Ï°í voidÀÏ °æ¿ì ¸®ÅÏÇÏÁö ¾Ê°Ú´Ù´Â °á°úÀÓ)
+	return A;			// ë¦¬í„´ì´ ì¶œë ¥ë˜ëŠ” ëŒ€ìƒ (void = ë§Œì•½ ìœ— int ì„ ì–¸ì´ì•„ë‹ˆê³  voidì¼ ê²½ìš° ë¦¬í„´í•˜ì§€ ì•Šê² ë‹¤ëŠ” ê²°ê³¼ì„)
 }
 
 int Rectangle::getdul()
