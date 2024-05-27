@@ -5,7 +5,7 @@
 class CBox :public CShape
 {
 public:
-	CPoint3 center3; // �߽��� ȸ�� ���صǵ���
+	CPoint3 center3; // Áß½ÉÃà È¸Àü ±âÁØµÇµµ·Ï
 	CPoint3 v[8];
 
 public:
