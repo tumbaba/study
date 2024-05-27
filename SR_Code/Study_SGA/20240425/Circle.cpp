@@ -20,7 +20,7 @@ Circle::~Circle()
 double Circle::getArea() 
 {
 	float pi = 3.141592;
-	float A = (radius / 2) * (radius / 2) * pi;      // ¿øÀÇ ¸éÀû ±¸ÇÏ´Â °ø½Ä = ¹İÁö¸§ x ¹İÁö¸§ x ÆÄÀÌ(3.14)
+	float A = (radius / 2) * (radius / 2) * pi;      // ì›ì˜ ë©´ì  êµ¬í•˜ëŠ” ê³µì‹ = ë°˜ì§€ë¦„ x ë°˜ì§€ë¦„ x íŒŒì´(3.14)
 
 	return A;
 }
