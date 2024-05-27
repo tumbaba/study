@@ -1,7 +1,7 @@
 #pragma once
 #include "CShape.h"
 
-//	 ÀÚ½Ä Å¬·¡½º : public ºÎ¸ğÅ¬·¡½º
+//	 ìì‹ í´ë˜ìŠ¤ : public ë¶€ëª¨í´ë˜ìŠ¤
 class CCircle : public CShape
 {
 public:
@@ -10,8 +10,8 @@ public:
 	int m_area;
 	int m_length;
 
-	void Area();		// ÇÔ¼ö - ¸éÀû
-	void Length();	// ÇÔ¼ö - µÑ·¹
+	void Area();		// í•¨ìˆ˜ - ë©´ì 
+	void Length();	// í•¨ìˆ˜ - ë‘˜ë ˆ
 
 
 };
