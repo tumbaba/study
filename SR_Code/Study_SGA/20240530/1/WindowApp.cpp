@@ -3,8 +3,8 @@
 
 WindowApp* WindowApp:: g_pApp = nullptr;
 
-//bool isDrawing = false;			// ¸¶¿ì½º Å¬¸¯»óÅÂ ÀúÀå
-//POINT startPoint, endPoint;		// ¼±ÀÇ ½ÃÀÛÁ¡°ú ³¡Á¡ ÀúÀå
+//bool isDrawing = false;			// ë§ˆìš°ìŠ¤ í´ë¦­ìƒíƒœ ì €ì¥
+//POINT startPoint, endPoint;		// ì„ ì˜ ì‹œì‘ì ê³¼ ëì  ì €ì¥
 
 
 WindowApp::WindowApp(HINSTANCE hInstance)
@@ -13,7 +13,7 @@ WindowApp::WindowApp(HINSTANCE hInstance)
 	this->hInstance = hInstance;
 	hwnd = NULL;
 	
-	g_pApp = this;   // Ãß°¡
+	g_pApp = this;   // ì¶”ê°€
 
 }
 
@@ -37,7 +37,7 @@ bool WindowApp::RegisterWindowClass()
 {
 	WNDCLASS wc = {};
 
-	wc.lpfnWndProc = WindowProc;					// À©µµ¿ì ¸ŞÀÎ¿¡¼­ ¸ÅÄª½ÃÅ´
+	wc.lpfnWndProc = WindowProc;					// ìœˆë„ìš° ë©”ì¸ì—ì„œ ë§¤ì¹­ì‹œí‚´
 	wc.hInstance = hInstance;
 	wc.lpszClassName = classname;
 
@@ -55,19 +55,19 @@ bool WindowApp::RegisterWindowClass()
 
 bool WindowApp::CreateAppWindow(int nCmdshow, int width, int height)
 {
-	HWND hwnd = CreateWindowEx(0,					// ¿îÀüÇÚµé°ú °°Àº°Í »ı¼º = exW´Â ¿ÍÀÏµåÄ³¸¯ÅÍ(À¯´ÏÄÚµå °ü·Ã)
-		classname,						// À©µµ¿ì Å¬·¡½º ³×ÀÓ 
-		L"½ÉÇÃ À©µµ¿ì ÇÁ·Î±×·¥",			// À©µµ¿ì Å¸ÀÌÆ²
-		WS_OVERLAPPEDWINDOW,			// WS_CAPTION, WS_SYSTEMµî ¿©·¯°¡Áö defineµéÀÌ ÇÕÃÄÁø °Í
-		0, 0, 							// À©µµ¿ì »ı¼º À§Ä¡ 
-		width, height,						// À©µµ¿ìÀÇ °¡·Î ¼¼·Î ±æÀÌ width, height
-		nullptr,							// À©µµ¿ì ºÎ¸ğÀÇ ÇÚµé
-		nullptr,							// ¸Ş´º ÇÚµé
+	HWND hwnd = CreateWindowEx(0,					// ìš´ì „í•¸ë“¤ê³¼ ê°™ì€ê²ƒ ìƒì„± = exWëŠ” ì™€ì¼ë“œìºë¦­í„°(ìœ ë‹ˆì½”ë“œ ê´€ë ¨)
+		classname,						// ìœˆë„ìš° í´ë˜ìŠ¤ ë„¤ì„ 
+		L"ì‹¬í”Œ ìœˆë„ìš° í”„ë¡œê·¸ë¨",			// ìœˆë„ìš° íƒ€ì´í‹€
+		WS_OVERLAPPEDWINDOW,			// WS_CAPTION, WS_SYSTEMë“± ì—¬ëŸ¬ê°€ì§€ defineë“¤ì´ í•©ì³ì§„ ê²ƒ
+		0, 0, 							// ìœˆë„ìš° ìƒì„± ìœ„ì¹˜ 
+		width, height,						// ìœˆë„ìš°ì˜ ê°€ë¡œ ì„¸ë¡œ ê¸¸ì´ width, height
+		nullptr,							// ìœˆë„ìš° ë¶€ëª¨ì˜ í•¸ë“¤
+		nullptr,							// ë©”ë‰´ í•¸ë“¤
 		hInstance,
 		nullptr
 	);
 
-	if (hwnd == NULL)			// Á¶°Ç¹® = ÇÚµéÀÌ NullÀÏ¶§ Á¾·á
+	if (hwnd == NULL)			// ì¡°ê±´ë¬¸ = í•¸ë“¤ì´ Nullì¼ë•Œ ì¢…ë£Œ
 	{
 		return false;
 	}
@@ -85,8 +85,8 @@ int WindowApp::Run()
 	MSG msg = {};
 	while (GetMessage(&msg, NULL, 0, 0))
 	{
-		TranslateMessage(&msg); // Å°º¸µå ÀÔ·Â ¸Ş¼¼Áö º¯È¯
-		DispatchMessage(&msg);	// À©µµ¿ì ÇÁ·Î½ÃÀú·Î Àü´Ş(¾Æ·¡ CALLBACK WindowProc)
+		TranslateMessage(&msg); // í‚¤ë³´ë“œ ì…ë ¥ ë©”ì„¸ì§€ ë³€í™˜
+		DispatchMessage(&msg);	// ìœˆë„ìš° í”„ë¡œì‹œì €ë¡œ ì „ë‹¬(ì•„ë˜ CALLBACK WindowProc)
 	}
 
 	return (int)msg.wParam;
@@ -112,29 +112,29 @@ LRESULT WindowApp::HandleMessage(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPa
 	switch (uMsg)
 	{
 
-	case WM_LBUTTONDOWN:					// ¸¶¿ì½º ¿ŞÂÊ¹öÆ° ´­¸²
+	case WM_LBUTTONDOWN:					// ë§ˆìš°ìŠ¤ ì™¼ìª½ë²„íŠ¼ ëˆŒë¦¼
 		isDrawing = true;
 		startPoint.x = LOWORD(lParam);
 		startPoint.y = HIWORD(lParam);
 		endPoint = startPoint;
 		return 0;
 
-	case WM_MOUSEMOVE:						// ¸¶¿ì½º ÀÌµ¿
+	case WM_MOUSEMOVE:						// ë§ˆìš°ìŠ¤ ì´ë™
 		if (isDrawing)
 		{
 			endPoint.x = LOWORD(lParam);
 			endPoint.y = HIWORD(lParam);
-			InvalidateRect(hwnd, NULL, TRUE);//È­¸é °»½Å¿äÃ»
+			InvalidateRect(hwnd, NULL, TRUE);//í™”ë©´ ê°±ì‹ ìš”ì²­
 		}
 		return 0;
 
-	case WM_LBUTTONUP:						// ¸¶¿ì½º ¿ŞÁ·¹öÆ° ¶¼Áü
+	case WM_LBUTTONUP:						// ë§ˆìš°ìŠ¤ ì™¼ì¡±ë²„íŠ¼ ë–¼ì§
 		if (isDrawing)
 		{
 			isDrawing = false;
 			endPoint.x = LOWORD(lParam);
 			endPoint.y = HIWORD(lParam);
-			InvalidateRect(hwnd, NULL, TRUE);//È­¸é °»½Å¿äÃ»
+			InvalidateRect(hwnd, NULL, TRUE);//í™”ë©´ ê°±ì‹ ìš”ì²­
 
 		}
 		return 0;
@@ -145,9 +145,9 @@ LRESULT WindowApp::HandleMessage(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPa
 		hdc = BeginPaint(hwnd, &ps);
 		
 
-		if (isDrawing) // ¼± ±×¸®±â
+		if (isDrawing) // ì„  ê·¸ë¦¬ê¸°
 		{
-			HPEN pen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));  // 2 =  ¼± µÎ²²
+			HPEN pen = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));  // 2 =  ì„  ë‘ê»˜
 			SelectObject(hdc, pen);
 			MoveToEx(hdc, startPoint.x, startPoint.y, NULL);
 			LineTo(hdc, endPoint.x, endPoint.y);
