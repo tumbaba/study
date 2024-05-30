@@ -28,7 +28,7 @@ private:
 	bool CreateAppWindow(int nCmdShow, int width, int height);
 
 
-	//¸¶¿ì½º »óÅÂÀÇ º¯¼ö
+	//Â¸Â¶Â¿Ã¬Â½Âº Â»Ã³Ã…Ã‚Ã€Ã‡ ÂºÂ¯Â¼Ã¶
 	bool isDrawing = false;
 	POINT startPoint, endPoint;
 
