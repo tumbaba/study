@@ -7,19 +7,19 @@ using namespace std;
 class Player
 {
 public:
-	// »ý¼ºÀÚ, ¼Ò¸êÀÚ
+	// ìƒì„±ìž, ì†Œë©¸ìž
 	Player() { _hp = 0; _mp = 0; }
 	Player(int hp, int mp) { _hp = hp; _mp = mp; }
 	~Player() {}
 
 
-	// ¸â¹öÇÔ¼ö : Å¬·¡½º¿¡¼­ ±â´É
-	// => Å¬·¡½ºÀÇ ¸â¹öº¯¼ö¿¡ Á¢±ÙÇÒ¼ö ÀÖ´Â ¹æ¹ý
+	// ë©¤ë²„í•¨ìˆ˜ : í´ëž˜ìŠ¤ì—ì„œ ê¸°ëŠ¥
+	// => í´ëž˜ìŠ¤ì˜ ë©¤ë²„ë³€ìˆ˜ì— ì ‘ê·¼í• ìˆ˜ ìžˆëŠ” ë°©ë²•
 
 	void Print()
 	{
-		cout << "PlayerÀÇ hp : " << _hp << endl;
-		cout << "PlayerÀÇ mp : " << _mp << endl;
+		cout << "Playerì˜ hp : " << _hp << endl;
+		cout << "Playerì˜ mp : " << _mp << endl;
 	}
 
 	void TakeDamage(int amount)
@@ -34,8 +34,8 @@ public:
 
 
 private:
-	// ¸â¹öº¯¼ö : Å¬·¡½º¿¡¼­ ¼Ó¼º
-	// ÄÚµùÄÁº¥¼Ç : ¸â¹öº¯¼ö¸¦ Ç¥½ÃÇØÁÖ´Â ÄÁº¥¼Ç
+	// ë©¤ë²„ë³€ìˆ˜ : í´ëž˜ìŠ¤ì—ì„œ ì†ì„±
+	// ì½”ë”©ì»¨ë²¤ì…˜ : ë©¤ë²„ë³€ìˆ˜ë¥¼ í‘œì‹œí•´ì£¼ëŠ” ì»¨ë²¤ì…˜
 	int _hp;
 	int _mp;
 };
